@@ -1,6 +1,6 @@
 package dev.artsman.poc;
 
-import dev.artsman.poc.hexagonal.arch.application.Application;
+import dev.artsman.poc.hexagonal.arch.Application;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;

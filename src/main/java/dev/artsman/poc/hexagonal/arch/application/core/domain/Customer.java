@@ -1,4 +1,4 @@
-package dev.artsman.poc.hexagonal.application.core.domain;
+package dev.artsman.poc.hexagonal.arch.application.core.domain;
 
 import java.util.Objects;
 import java.util.UUID;
@@ -7,8 +7,7 @@ public class Customer {
 	private UUID id;
 	private String name;
 	private Address address;
-	private String cpf;
-	private boolean isValid;
+	private Cpf cpf;
 
 	public UUID getId() {
 		return id;
@@ -34,20 +33,12 @@ public class Customer {
 		this.address = address;
 	}
 
-	public String getCpf() {
+	public Cpf getCpf() {
 		return cpf;
 	}
 
-	public void setCpf(String cpf) {
+	public void setCpf(Cpf cpf) {
 		this.cpf = cpf;
-	}
-
-	public boolean isValid() {
-		return isValid;
-	}
-
-	public void setValid(boolean valid) {
-		isValid = valid;
 	}
 
 	@Override
@@ -68,11 +59,6 @@ public class Customer {
 
 	@Override
 	public String toString() {
-		return "Customer[" +
-			"id=" + id + ", " +
-			"name=" + name + ", " +
-			"address=" + address + ", " +
-			"cpf=" + cpf + ", " +
-			"isValid=" + isValid + ']';
+		return "Customer{" + "id=" + id + ", name='" + name + '\'' + ", address=" + address + ", cpf=" + cpf + '}';
 	}
 }

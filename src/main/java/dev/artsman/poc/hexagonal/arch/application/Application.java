@@ -1,4 +1,4 @@
-package dev.artsman.poc;
+package dev.artsman.poc.hexagonal.arch.application;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

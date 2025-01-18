@@ -1,8 +1,8 @@
-package dev.artsman.poc.hexagonal.application.core.usecase;
+package dev.artsman.poc.hexagonal.arch.application.core.usecase;
 
-import dev.artsman.poc.hexagonal.application.core.domain.Customer;
-import dev.artsman.poc.hexagonal.application.port.outbound.FindAddressByZipCodeOutputPort;
-import dev.artsman.poc.hexagonal.application.port.outbound.InsertCustomerOutputPort;
+import dev.artsman.poc.hexagonal.arch.application.core.domain.Customer;
+import dev.artsman.poc.hexagonal.arch.application.port.outbound.FindAddressByZipCodeOutputPort;
+import dev.artsman.poc.hexagonal.arch.application.port.outbound.InsertCustomerOutputPort;
 
 public class InsertCustomerUseCase {
 	private final FindAddressByZipCodeOutputPort findAddressByZipCodeOutputPort;

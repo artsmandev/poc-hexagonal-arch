@@ -1,0 +1,17 @@
+{
+  "request": {
+    "method": "GET",
+    "url": "/api/v1/address/3cc5adcc-44e5-4090-ab02-7d0a96c28eb4"
+  },
+  "response": {
+    "status": 200,
+    "jsonBody": {
+      "street": "Somewhere Street",
+      "city": "Somewhere City",
+      "state": "Somewhere State"
+    },
+    "headers": {
+      "Content-Type": "application/json"
+    }
+  }
+}

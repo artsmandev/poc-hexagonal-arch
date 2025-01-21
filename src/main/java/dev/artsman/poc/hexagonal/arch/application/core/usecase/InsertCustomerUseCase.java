@@ -1,11 +1,11 @@
 package dev.artsman.poc.hexagonal.arch.application.core.usecase;
 
 import dev.artsman.poc.hexagonal.arch.application.core.domain.Customer;
+import dev.artsman.poc.hexagonal.arch.application.port.inbound.InsertCustomerInputPort;
 import dev.artsman.poc.hexagonal.arch.application.port.outbound.FindAddressByZipCodeOutputPort;
 import dev.artsman.poc.hexagonal.arch.application.port.outbound.InsertCustomerOutputPort;
-import java.util.UUID;
 
-public class InsertCustomerUseCase {
+public class InsertCustomerUseCase implements InsertCustomerInputPort {
 	private final FindAddressByZipCodeOutputPort findAddressByZipCodeOutputPort;
 	private final InsertCustomerOutputPort insertCustomerOutputPort;
 
@@ -14,7 +14,8 @@ public class InsertCustomerUseCase {
 		this.insertCustomerOutputPort = insertCustomerOutputPort;
 	}
 
-	public void insert(Customer customer, UUID zipCode) {
+	@Override
+	public void insert(Customer customer, String zipCode) {
 		var address = findAddressByZipCodeOutputPort.find(zipCode);
 		customer.setAddress(address);
 

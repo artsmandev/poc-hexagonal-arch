@@ -4,7 +4,6 @@ import dev.artsman.poc.hexagonal.arch.adapter.outbound.http.client.FindAddressBy
 import dev.artsman.poc.hexagonal.arch.adapter.outbound.http.client.mapper.FindAddressByZipCodeMapper;
 import dev.artsman.poc.hexagonal.arch.application.core.domain.Address;
 import dev.artsman.poc.hexagonal.arch.application.port.outbound.FindAddressByZipCodeOutputPort;
-import java.util.UUID;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Component;
 
@@ -15,7 +14,7 @@ public class FindAddressByZipCodeAdapter implements FindAddressByZipCodeOutputPo
 	private final FindAddressByZipCodeMapper findAddressByZipCodeMapper;
 
 	@Override
-	public Address find(UUID zipCode) {
+	public Address find(String zipCode) {
 		var addressResponse = findAddressByZipCodeHttpClient.find(zipCode);
 		return findAddressByZipCodeMapper.toAddress(addressResponse);
 	}

@@ -2,7 +2,6 @@ package dev.artsman.poc.hexagonal.arch.adapter.inbound.controller;
 
 import dev.artsman.poc.hexagonal.arch.adapter.outbound.http.client.FindAddressByZipCodeHttpClient;
 import dev.artsman.poc.hexagonal.arch.adapter.outbound.http.client.response.AddressResponse;
-import java.util.UUID;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -17,7 +16,7 @@ public class AddressController {
 	private final FindAddressByZipCodeHttpClient findAddressByZipCodeHttpClient;
 
 	@GetMapping("/{zipCode}")
-	public ResponseEntity<AddressResponse> findAddressByZipCode(@PathVariable UUID zipCode) {
+	public ResponseEntity<AddressResponse> findAddressByZipCode(@PathVariable String zipCode) {
 		var addressResponse = findAddressByZipCodeHttpClient.find(zipCode);
 		return ResponseEntity.ok(addressResponse);
 	}

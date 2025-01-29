@@ -1,6 +1,6 @@
 package dev.artsman.poc.hexagonal.arch.adapter.outbound.http.client;
 
-import dev.artsman.poc.hexagonal.arch.adapter.outbound.http.client.response.AddressResponse;
+import dev.artsman.poc.hexagonal.arch.adapter.inbound.controller.response.AddressResponse;
 import org.springframework.cloud.openfeign.FeignClient;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;

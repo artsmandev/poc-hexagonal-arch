@@ -16,4 +16,8 @@ public class DatabaseFake {
 	public static CustomerEntity find(UUID id) {
 		return data.get(id);
 	}
+
+	public static void update(CustomerEntity customer) {
+		data.put(customer.getId(), customer);
+	}
 }
